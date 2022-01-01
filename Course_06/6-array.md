@@ -85,7 +85,7 @@
     - 2차원 배열에서만 사용할 수 있는 **특별한 연산**
       - `배열 접기(fold)`
         - 2차원 배열을 가로 축(행) 또는 세로 축(열)으로 접는 연산
-        - 예시1) 중첩 반복문을 사용해서 행으로 접는 예시
+        - 예시1) 중첩 반복문을 사용해서 '행'으로 접는 예시
           ```c++
           for (int i = 0; i < rowSize; i++)
           {
@@ -95,13 +95,13 @@
             }
           }
           ```
-        - 예시2) 중첩 반복문을 사용해서 열로 접는 예시
+        - 예시2) 중첩 반복문을 사용해서 '열'로 접는 예시
           ```c++
-          for (int i = 0; i < rowSize; i++) // 둘이 바꿔야 하나?
+          for (int j = 0; j < colSize; j++) 
           {
-            for (int j = 0; j < colSize; j++) // 둘이 바꿔야 하나?
+            for (int i = 0; i < rowSize; i++)
             {
-              foldedArray[i][colSize - 1 - j] = originalArray[i][j]; // 맞는지 확인 필요!
+              foldedArray[i][colSize - 1 - j] = originalArray[i][j];
             }
           }
           ```
