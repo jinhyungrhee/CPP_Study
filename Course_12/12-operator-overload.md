@@ -466,7 +466,7 @@ fract1 %= fract2    →   fract1 = fract1 % fract2
   - 스마트 포인터를 사용하지 않는 경우
     ```c++
     Fraction* ptr = new Fraction(2, 5);
-    *(ptr).print();
+    (*ptr).print();
     ptr->print();
     ```
     - 이렇게 만든 Fraction 객체는 힙 메모리에서 자동으로 소멸하지 않으므로, 메모리 누수를 피하려면 별도로 소멸작업을 해줘야 함!
